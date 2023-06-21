@@ -10,11 +10,9 @@ import NextPayment
 
 @objc
 public class InteropFactory : NSObject {
-    
-    public init(){}
-    
+        
     public func createTransation() -> NextPayment.Transaction {
-        return RealTransaction()
+        return Factory().createTransation()
     }
 }
 
