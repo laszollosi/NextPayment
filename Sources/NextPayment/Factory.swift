@@ -8,6 +8,8 @@
 import Foundation
 
 public class Factory {
+    public init() {}
+    
     public func createTransation() -> Transaction {
         return RealTransaction()
     }
