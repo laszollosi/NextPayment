@@ -11,6 +11,9 @@ let package = Package(
         .library(
             name: "NextPayment",
             targets: ["NextPayment"]),
+        .library(
+            name: "NextPaymentObjcBridge",
+            targets: ["NextPaymentObjcBridge"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,6 +25,9 @@ let package = Package(
         .target(
             name: "NextPayment",
             dependencies: []),
+        .target(
+            name: "NextPaymentObjcBridge",
+            dependencies: [.target(name: "NextPayment")]),
         .testTarget(
             name: "NextPaymentTests",
             dependencies: ["NextPayment"]),
